@@ -52,6 +52,11 @@ class LoadTest {
         assertEquals(30_000.0, TestsHelper.getStatisticsByCountry("RU"));
     }
 
+    @Test
+    void testAfterRestart() {
+        assertEquals(30_000.0, TestsHelper.getStatisticsByCountry("RU"));
+    }
+
 
     @Test
     void testPrecision() {
