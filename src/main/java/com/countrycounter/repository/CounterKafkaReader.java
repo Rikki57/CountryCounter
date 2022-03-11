@@ -41,9 +41,9 @@ public class CounterKafkaReader {
                 persistStorage();
             }
         };
-        LocalDateTime localDateTime1 = LocalDateTime.now().plusSeconds(-11);
+        LocalDateTime localDateTime1 = LocalDateTime.now();
         Date date = Date.from(localDateTime1.atZone(ZoneId.systemDefault()).toInstant());
-        timer.schedule(persistTask, date, 5000);
+        timer.schedule(persistTask, date, 1000);
     }
 
     @KafkaListener(topics = "countryCounter", groupId = "main")
